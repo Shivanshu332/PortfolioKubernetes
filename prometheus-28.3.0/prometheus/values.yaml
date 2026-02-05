@@ -1092,19 +1092,19 @@ scrapeConfigs:
     job_name: ""
     static_configs:
       - targets:
-          - 10.96.253.189:8082
+          - argocd-application-controller-metrics.argo-cd.svc.cluster.local:8082
   argocd-applicationset-controller-metrics:
     enabled: true
     job_name: ""
     static_configs:
       - targets:
-          - 10.96.47.124:8080
+          - argocd-applicationset-controller-metrics.argo-cd.svc.cluster.local:8080
   argocd-notifications-controller-metrics:
     enabled: true
     job_name: ""
     static_configs:
       - targets:
-          - 10.96.120.2:9001
+          - argocd-notifications-controller-metrics:9001
   argocd-redis-metrics:
     enabled: true
     job_name: ""
@@ -1116,13 +1116,13 @@ scrapeConfigs:
     job_name: ""
     static_configs:
       - targets:
-          - 10.96.95.2:8084
+          - argocd-repo-server-metrics.argo-cd.svc.cluster.local:8084
   argocd-server-metrics:
     enabled: true
     job_name: ""
     static_configs:
       - targets:
-          - 10.96.14.73:8083
+          - argocd-server-metrics.argo-cd.svc.cluster.local:8083
 # extraScrapeConfigs adds additional scrape configs to prometheus.yml
 # must be a string so you have to add a | after extraScrapeConfigs:
 # example adds prometheus-blackbox-exporter scrape config
