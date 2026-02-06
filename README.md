@@ -11,5 +11,5 @@ kubectl create secret generic openbao-unseal-keys --from-literal=keys.json='{"ke
 ```
 
 ```bash
-kubectl exec -ti openbao-0 -- bao operator init
+kubectl exec -ti openbao-0 -n openbao -- bao operator init
 ```
