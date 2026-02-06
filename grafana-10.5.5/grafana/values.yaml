@@ -497,10 +497,24 @@ initChownData:
 adminUser: admin
 adminPassword: admin1234
 
+externalSecrets:
+  enabled: true
+  refreshInterval: 1h
+  targetSecret: grafana-admin-secret
+  secrets:
+    - key: admin-user
+      path: dev/grafana
+      property: adminUser
+    - key: admin-password
+      path: dev/grafana
+      property: adminPassword
+
+
+
 # Use an existing secret for the admin user.
 admin:
   ## Name of the secret. Can be templated.
-  existingSecret: ""
+  existingSecret: grafana-admin-secret
   userKey: admin-user
   passwordKey: admin-password
 
