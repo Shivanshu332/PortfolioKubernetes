@@ -494,8 +494,8 @@ initChownData:
         - ALL
 
 # Administrator credentials when not using an existing secret (see below)
-adminUser: admin
-adminPassword: admin1234
+# adminUser: admin
+# adminPassword: admin1234
 
 externalSecrets:
   enabled: true
